@@ -1,0 +1,6 @@
+streamlit==1.59.2
+pandas
+numpy
+shapely
+folium
+streamlit-folium
