@@ -22,184 +22,40 @@ st.set_page_config(
 st.markdown("""
 <style>
 
-/* ---------------- MAIN BACKGROUND ---------------- */
-
-.stApp {
-    background:
-    linear-gradient(
-        135deg,
-        #020617 0%,
-        #071428 25%,
-        #0b2447 50%,
-        #071428 75%,
-        #020617 100%
-    );
-}
-
-/* Animated GIS grid overlay */
-.stApp::before {
-    content: "";
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background-image:
-        linear-gradient(rgba(0,255,255,0.03) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(0,255,255,0.03) 1px, transparent 1px);
-
-    background-size: 45px 45px;
-    pointer-events: none;
-    z-index: -1;
-}
-
-/* ---------------- SIDEBAR ---------------- */
-
-[data-testid="stSidebar"] {
-    background:
-        linear-gradient(
-            180deg,
-            rgba(2,6,23,0.98),
-            rgba(15,23,42,0.98)
-        );
-
-    border-right: 1px solid rgba(0,255,255,0.15);
-}
-
-/* ---------------- TITLE ---------------- */
-
 .main-title{
-    font-size:65px;
-    font-weight:900;
     text-align:center;
-    color:#ffffff;
-
-    text-shadow:
-        0 0 8px #00ffff,
-        0 0 18px #00ffff,
-        0 0 35px #00ffff;
+    font-size:70px;
+    font-weight:900;
+    color:#00E5FF;
+    text-shadow:0px 0px 30px #00E5FF;
 }
 
 .sub-title{
     text-align:center;
-    color:#dbeafe;
-    font-size:22px;
-    margin-bottom:25px;
+    font-size:24px;
+    color:white;
+    margin-bottom:40px;
 }
 
-/* ---------------- GLASS CARDS ---------------- */
-
-.glass-card{
-    background: rgba(255,255,255,0.08);
-
-    border:1px solid rgba(255,255,255,0.15);
-
-    backdrop-filter: blur(18px);
-
-    border-radius:25px;
-
-    padding:25px;
-
-    box-shadow:
-        0px 8px 32px rgba(0,0,0,0.45);
-}
-
-/* ---------------- FIX INVISIBLE METRICS ---------------- */
-
-div[data-testid="metric-container"] {
-    background: rgba(255,255,255,0.05);
-    border: 1px solid rgba(255,255,255,0.1);
-    padding: 18px;
-    border-radius: 18px;
-}
-
-/* metric title */
-div[data-testid="metric-container"] label {
-    color: #ffffff !important;
-    font-size: 18px !important;
-    font-weight: 700 !important;
-}
-
-/* metric value */
-div[data-testid="metric-container"] div {
-    color: #00ffff !important;
-    font-size: 40px !important;
-    font-weight: 900 !important;
-}
-
-/* ---------------- HEADINGS ---------------- */
-
-h1,h2,h3,h4,h5,h6{
-    color:white !important;
-}
-
-/* ---------------- TEXT ---------------- */
-
-p, span, div, label {
-    color:white !important;
-}
-
-/* ---------------- BUTTON ---------------- */
-
-.stButton>button{
-    background:
-        linear-gradient(
-            135deg,
-            #00c6ff,
-            #0072ff
-        );
-
-    color:white !important;
-
-    border:none;
-
-    border-radius:15px;
-
-    height:55px;
-
-    font-size:18px;
-
-    font-weight:700;
-
-    transition:0.3s;
-}
-
-.stButton>button:hover{
-    transform:scale(1.03);
-    box-shadow:0px 0px 20px #00ffff;
-}
-
-/* ---------------- INPUT BOX ---------------- */
-
-input {
-    color:white !important;
-    background-color: rgba(255,255,255,0.08) !important;
-}
-
-/* ---------------- SELECT BOX ---------------- */
-
-div[data-baseweb="select"] > div {
-    background-color: rgba(255,255,255,0.08) !important;
-    color:white !important;
-}
-
-/* ---------------- SUCCESS BOX ---------------- */
-
-.stAlert{
-    border-radius:18px;
+div[data-testid="metric-container"]{
+    background-color:#0A192F;
+    border:1px solid #00E5FF33;
+    border-radius:20px;
+    padding:20px;
 }
 
 </style>
 """, unsafe_allow_html=True)
-
 # --------------------------------------------------
 # HEADER
 # --------------------------------------------------
 
 st.markdown("""
-<div class='main-title'>
-🛰️ GeoStone AI
+<div class="main-title">
+🛰 GeoStone AI
 </div>
 
-<div class='sub-title'>
+<div class="sub-title">
 Satellite Land Intelligence • Smart Boundary Detection • GIS Survey Platform
 </div>
 """, unsafe_allow_html=True)
